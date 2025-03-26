@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Séries, Filmes, Documentários e Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(to right, #1f1c2c, #928dab);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Cabeçalho e menu */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .menu a:hover {
+            background-color: #ff6f61;
+            transform: scale(1.1);
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding-top: 100px;
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            padding: 100px 20px;
+        }
+
+        .cartao {
+            background: #fff;
+            color: #333;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cartao:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cartao img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .cartao h2 {
+            font-size: 1.4rem;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .cartao p {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            width: 150%;
+            display: flex;
+            justify-content:space-evenly;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="color:#ff6f61; font-size:1.8rem;">CinePrime</h1>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#documentarios">Documentários</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="filmes">
+        <div class="cartao">
+            <img src="imagens/p4.jpg" alt="Capa do filme Jogos Vorazes">
+            <h2>Jogos Vorazes</h2>
+            <p>A luta pela sobrevivência em um futuro distópico.</p>
+        </div>
+        <div class="cartao">
+            <img src="imagens/p5.jpg" alt="Capa do filme Jogador Número 1">
+            <h2>Jogador Nº 1</h2>
+            <p>Um mergulho em um mundo de realidade virtual e aventura.</p>
+        </div>
+        <div class="cartao">
+            <img src="imagens/p6.jpg" alt="Capa do filme Show de Vizinha">
+            <h2>Show de Vizinha</h2>
+            <p>Uma comédia romântica cheia de surpresas.</p>
+        </div>
+        <div class="cartao">
+            <img src="imagens/p7.jpg" alt="Capa do filme 2012">
+            <h2>2012</h2>
+            <p>O fim do mundo em uma aventura épica e eletrizante.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CinePrime - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
